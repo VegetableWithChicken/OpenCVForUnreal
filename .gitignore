@@ -1,32 +1,78 @@
-# Prerequisites
-*.d
+.idea/
+/.vs
+Output/
+PAKs/
+log
+*.log
+RobotEngine/.vs/
+RobotEngine/.vscode/
+RobotEngine/RobotEngine.sln
+RobotEngine/RobotEngine.code-workspace
+RobotEngine/.ignore
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+RobotEngine/Binaries/
+!RobotEngine/Binaries/Win64/zlib.dll
+RobotEngine/Saved/
+RobotEngine/Intermediate
+RobotEngine/enc_temp_folder
+RobotEngine/DerivedDataCache
+RobotEngine/WindowsNoEditor/
+RobotEngine/Build/
+!RobotEngine/Build/Android/PakBlacklist-Debug.txt
+!RobotEngine/Build/Android/PakBlacklist-Development.txt
+!RobotEngine/Build/Android/PakBlacklist-Shipping.txt
+!RobotEngine/Build/Android/PakBlacklist-Test.txt
 
-# Precompiled Headers
-*.gch
-*.pch
+RobotEngine/Plugins/H5UE4/Intermediate/Build/Win64/UE4Editor/Inc/H5UE4/H5UE4BpFuncLibrary.generated.h
+RobotEngine/Plugins/H5UE4/Intermediate/
+RobotEngine/Plugins/H5UE4/Binaries/
+RobotEngine/Plugins/VaRestPlugin/Intermediate/
+RobotEngine/Plugins/VaRestPlugin/Binaries/Win64/UE4Editor-VaRestEditorPlugin.dll
+RobotEngine/Plugins/VaRestPlugin/Binaries/
+RobotEngine/Plugins/OVRLipSync/Binaries/
+RobotEngine/Plugins/OVRLipSync/Intermediate/
+RobotEngine/Plugins/LoadScreen/Binaries/
+RobotEngine/Plugins/LoadScreen/Intermediate/
+RobotEngine/Plugins/HarixRcuCore/Binaries/
+RobotEngine/Plugins/HarixRcuCore/Intermediate/
+RobotEngine/Plugins/HarixRcu/Binaries/
+RobotEngine/Plugins/HarixRcu/Intermediate/
+RobotEngine/Plugins/HarixRcuCore/HarixRcuLib/libharixrcu_core.a
+RobotEngine/Plugins/HarixRcuCore/HarixRcuLib/main.o
+RobotEngine/Plugins/AndroidAccessor/Binaries/
+RobotEngine/Plugins/AndroidAccessor/Intermediate/
+RobotEngine/Plugins/VirtualPeople/Binaries/
+RobotEngine/Plugins/VirtualPeople/Intermediate/
+RobotEngine/Plugins/HarixRcuSDK/Binaries/
+RobotEngine/Plugins/HarixRcuSDK/Intermediate/
+RobotEngine/Plugins/AutomatedTesting/Binaries/
+RobotEngine/Plugins/AutomatedTesting/Intermediate/
+RobotEngine/Plugins/HariSDK/Binaries/
+RobotEngine/Plugins/HariSDK/Intermediate/
+RobotEngine/Plugins/DirectExcel/Intermediate/
+RobotEngine/Plugins/DirectExcel/Binaries/
+RobotEngine/Plugins/SQLiteManager/Binaries/Win64
+RobotEngine/Plugins/SQLiteManager/Intermediate/Build/Win64/UE4Editor
+RobotEngine/Plugins/MediaPlayer/Binaries/Win64
+RobotEngine/Plugins/MediaPlayer/Intermediate
+RobotEngine/Plugins/RcuService/Intermediate
+RobotEngine/Plugins/RcuService/Binaries
+RobotEngine/Plugins/WebSocketUtilities/Intermediate
+RobotEngine/Plugins/WebSocketUtilities/Binaries
+/RobotEngine/Plugins/DataDrivenTool/Content
+/RobotEngine/Plugins/DataDrivenTool/Intermediate
+/RobotEngine/Plugins/DataDrivenTool/Binaries
+RobotEngine/Plugins/puerts/Intermediate/
+RobotEngine/Plugins/puerts/Binaries/
+RobotEngine/Plugins/ReactUMG/Intermediate/
+RobotEngine/Plugins/ReactUMG/Binaries/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+RobotEngine/Plugins/JsonLibrary/Intermediate/
+RobotEngine/Plugins/JsonLibrary/Binaries/
+RobotEngine/Plugins/WebUI/Intermediate/
+RobotEngine/Plugins/WebUI/Binaries/
 
-# Fortran module files
-*.mod
-*.smod
+RobotEngine/Plugins/ResourcesDownloader/Binaries/
+RobotEngine/Plugins/ResourcesDownloader/Intermediate/
+RobotEngine/Plugins/SQLiteManager/Intermediate/
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app

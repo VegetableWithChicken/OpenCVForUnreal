@@ -1,0 +1,11 @@
+{
+        "dayConfidence":0.9,   
+        "nightConfidence":0.095, 
+        "alphaValue":1.3,          
+        "BrightlessValue":50.0,    
+        "Yolo3Confidence":0.3,     
+        "Openfacerecognition":true,  
+        "OpenBodyrecognition":false ,
+        "UseTCP":false
+
+}
