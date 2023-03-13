@@ -2,14 +2,16 @@
 how to use face/body recognize in unreal engine
 
 
-UE4使用OpenCV库插件  
-UE4多线程FRunnable使用  
-UE4异步调用  
-使用DNN深度神经网络人脸识别包含yolov3和DNN模型  
-各种人脸识别模型对比  
-Mat 图片转UE4的UTexture2D图片  
-Mat图片裁切等  
-调整图片亮度，比如晚上图片比较暗，可以调整  
+1. 目前在UE5.0和4.0编译都是OK的
+2. UE4使用OpenCV库插件
+3. UE4多线程FRunnable使用
+4. UE4异步调用
+5. 使用DNN深度神经网络人脸识别，性别，年龄，对象检测等
+6. 各种人脸识别模型对比
+7. Mat 图片转UE4的UTexture2D图片Mat图片裁切等  
+8. 调整图片亮度，比如晚上图片比较暗，可以调整
+9. Python版本是用做单独识别，如果UE4里面做识别影响其他性能，可以单独通过Python脚本来通信
+
 #### 最新代码功能请看下面链接：
 https://zhuanlan.zhihu.com/p/391870538
 
