@@ -2,7 +2,7 @@
 how to use face/body recognize in unreal engine
 
 
-1. 目前在UE5.0和4.0编译都是OK的
+1. 目前在4.27编译都是OK的
 2. UE4使用OpenCV库插件
 3. UE4多线程FRunnable使用
 4. UE4异步调用
