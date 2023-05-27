@@ -39,42 +39,7 @@ AHikVisionActor::AHikVisionActor()
 	//cv::String str = std::string(TCHAR_TO_UTF8(*TempPath));
 	//FaceCascadeClassifier.load(str);
 
-	/**读取配置文件配置信息*/
-	FString PluginConfigDir = FPaths::ProjectPluginsDir() + "HiKVision/Config/";
-	TSharedPtr<FJsonObject> Obj=GetJsonObjectFromFile(PluginConfigDir, FString("WaterCurtainDoor.json"));
-	day_confidence = (float)Obj->GetNumberField("dayConfidence");
-	night_confidence=(float)Obj->GetNumberField("nightConfidence");
-	AlphaValue = (float)Obj->GetNumberField("alphaValue");
-	BrightlessValue=(float)Obj->GetNumberField("BrightlessValue");
-	Yolo3Confidence = (float)Obj->GetNumberField("Yolo3Confidence");
-	OpenFace=Obj->GetBoolField("Openfacerecognition");
-	OpenBody = Obj->GetBoolField("OpenBodyrecognition");
-	bUseTCP = Obj->GetBoolField("UseTCP");
-	/**DNN Face Recognation*/
-	FString DnnModels= PluginConfigDir + TEXT("res10_300x300_ssd_iter_140000_fp16.caffemodel");
-	FString DNNBinary= PluginConfigDir + TEXT("deploy.prototxt");
-	net = cv::dnn::readNetFromCaffe(TCHAR_TO_UTF8(*DNNBinary), TCHAR_TO_UTF8(*DnnModels));
-	net.setPreferableBackend(cv::dnn::Backend::DNN_BACKEND_OPENCV);
-	net.setPreferableTarget(cv::dnn::Target::DNN_TARGET_CPU);
-
-	//Body Recognation
-	std::string Yolov3Weights(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir) + TEXT("yolov3.weights"))));
-	std::string Yolov3cfg(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir)+ TEXT("yolov3.cfg"))));
-	std::string classesFile(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir) + TEXT("coco.names"))));
-	std::ifstream ifs(classesFile);
-	std::string classline;
-	while (std::getline(ifs, classline))
-	{
-		classes.push_back(classline);
-	}
-
 	
-	//D:/UE4Protect/One/4.26/HiKVison/Plugins/HiKVision/Source/HiKVision/
-	
-	Yolov3Net = cv::dnn::readNetFromDarknet(Yolov3cfg,Yolov3Weights);
-	Yolov3Net.setPreferableBackend(cv::dnn::Backend::DNN_BACKEND_OPENCV);
-	Yolov3Net.setPreferableTarget(cv::dnn::Target::DNN_TARGET_CPU);
-	 if (net.empty()|Yolov3Net.empty()) return;
 
 }
 
@@ -99,6 +64,46 @@ TSharedPtr<FJsonObject> AHikVisionActor::GetJsonObjectFromFile(FString FileDir, 
 // Called when the game starts or when spawned
 void AHikVisionActor::BeginPlay()
 {
+
+	/**读取配置文件配置信息*/
+	//FString PluginConfigDir = FPaths::ProjectPluginsDir() + "HiKVision/Config/";
+	FString PluginConfigDir = "D:\\Users\\chong.peng\\Documents\\Unreal Projects\\CVTest\\OpenCV_Test\\Plugins\\HiKVision\\Config\\";
+	TSharedPtr<FJsonObject> Obj = GetJsonObjectFromFile(PluginConfigDir, FString("WaterCurtainDoor.json"));
+	day_confidence = (float)Obj->GetNumberField("dayConfidence");
+	night_confidence = (float)Obj->GetNumberField("nightConfidence");
+	AlphaValue = (float)Obj->GetNumberField("alphaValue");
+	BrightlessValue = (float)Obj->GetNumberField("BrightlessValue");
+	Yolo3Confidence = (float)Obj->GetNumberField("Yolo3Confidence");
+	OpenFace = Obj->GetBoolField("Openfacerecognition");
+	OpenBody = Obj->GetBoolField("OpenBodyrecognition");
+	bUseTCP = Obj->GetBoolField("UseTCP");
+	/**DNN Face Recognation*/
+	FString DnnModels = PluginConfigDir + TEXT("res10_300x300_ssd_iter_140000_fp16.caffemodel");
+	FString DNNBinary = PluginConfigDir + TEXT("deploy.prototxt");
+	net = cv::dnn::readNetFromCaffe(TCHAR_TO_UTF8(*DNNBinary), TCHAR_TO_UTF8(*DnnModels));
+
+
+	net.setPreferableBackend(cv::dnn::Backend::DNN_BACKEND_OPENCV);
+	net.setPreferableTarget(cv::dnn::Target::DNN_TARGET_CPU);
+
+	//Body Recognation
+	std::string Yolov3Weights(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir) + TEXT("yolov3.weights"))));
+	std::string Yolov3cfg(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir) + TEXT("yolov3.cfg"))));
+	std::string classesFile(TCHAR_TO_UTF8(*(FPaths::ConvertRelativePathToFull(PluginConfigDir) + TEXT("coco.names"))));
+	std::ifstream ifs(classesFile);
+	std::string classline;
+	while (std::getline(ifs, classline))
+	{
+		classes.push_back(classline);
+	}
+
+
+	Yolov3Net = cv::dnn::readNetFromDarknet(Yolov3cfg, Yolov3Weights);
+	Yolov3Net.setPreferableBackend(cv::dnn::Backend::DNN_BACKEND_OPENCV);
+	Yolov3Net.setPreferableTarget(cv::dnn::Target::DNN_TARGET_CPU);
+	if (net.empty() | Yolov3Net.empty()) return;
+
+
 	Super::BeginPlay();
 	if (!bUseTCP)
 	{

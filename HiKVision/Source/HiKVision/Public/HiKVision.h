@@ -12,4 +12,10 @@ public:
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
+
+
+	void* OpenCvDllHandle;
+	void* OpenCvffmpegDllHandle;
+	void* OpenCvMsmfDllHandle;
+
 };
