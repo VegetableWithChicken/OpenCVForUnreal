@@ -3,7 +3,11 @@
 #include "CoreMinimal.h"
 
 
+#if PLATFORM_WINDOWS
 
+#undef check
+
+#include <opencv2/core/utility.hpp>
 
 #include "opencv2/core.hpp"
 #include "opencv2/imgcodecs.hpp"
@@ -20,11 +24,14 @@
 #include "opencv2/core/mat.hpp"
 #include "opencv2/core/hal/interface.h"
 #include "opencv2/dnn/layer.hpp"
-#include "opencv2/dnn/all_layers.hpp"
-#include "opencv2/core/utility.hpp"
 #include "opencv2/dnn/dnn.hpp"
+#include "opencv2/dnn/all_layers.hpp"
 #include "opencv2/videoio/legacy/constants_c.h"
 #include "opencv2/core/cvstd_wrapper.hpp"
+
+//#define check(assertion) __Check(assertion) # restore APPLE "check()" macro
+#endif//PLATFORM_WINDOWS
+
 
 
 

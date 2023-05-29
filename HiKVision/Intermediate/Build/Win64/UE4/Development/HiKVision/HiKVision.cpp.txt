@@ -1,2 +1,0 @@
-D:\UE4Protect\One\4.26\HiKVison\Plugins\HiKVision\Intermediate\Build\Win64\UE4\Development\HiKVision\Definitions.HiKVision.h
-D:\UE4Protect\One\4.26\HiKVison\Plugins\HiKVision\Source\HiKVision\Public\HiKVision.h
