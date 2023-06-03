@@ -1,7 +1,7 @@
 # OpenCVForUnreal
 how to use face/body recognize and more in unreal engine
 
-1. Currently all compilations are OK on 5.0,but run model is bad ,i will do it quickly;but 4.27 is fine ,done it by tag 4.27
+1. Currently all compilations are OK on 5.0,and you should download pre-traning-model from https://github.com/spmallick/learnopencv/tree/master/FaceDetectionComparison/models
 2. UE4 uses the OpenCV library plugin
 3. UE4 Multithreaded FRunnable Usage
 4. UE4 asynchronous calls
