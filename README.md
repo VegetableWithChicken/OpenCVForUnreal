@@ -1,6 +1,7 @@
 # OpenCVForUnreal
 how to use face/body recognize in unreal engine
-
+UE5.0版本已经支持，
+目前需要重新下载预训练模型替换到Config文件夹下面即可，目前的模型是缺失的
 
 1. 目前在4.27编译都是OK的
 2. UE4使用OpenCV库插件
