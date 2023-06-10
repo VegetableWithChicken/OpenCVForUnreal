@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-HiKVision-0001.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\HSPark\Intermediate\Build\Win64\HSParkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\HSPark\Plugins\HiKVision\Intermediate\Build\Win64\UE4Editor\Development\HiKVision\Module.HiKVision.cpp.obj"
+"D:\HSPark\Plugins\HiKVision\Intermediate\Build\Win64\UE4Editor\Development\HiKVision\Module.HiKVision.gen.cpp.obj"
+"D:\HSPark\Plugins\HiKVision\Intermediate\Build\Win64\UE4Editor\Development\HiKVision\Default.rc2.res"
+/OUT:"D:\HSPark\Plugins\HiKVision\Intermediate\Build\Win64\UE4Editor\Development\HiKVision\UE4Editor-HiKVision-0001.lib"
+/INCLUDE:IMPLEMENT_MODULE_HiKVision

@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.OpenCVForUnreal.cpp.obj": [
+			"OpenCVForUnreal.init.gen.cpp.obj",
+			"OpenCVForUnrealActor.gen.cpp.obj",
+			"OpenCVForUnreal.cpp.obj",
+			"OpenCVForUnrealActor.cpp.obj"
+		]
+	}
+}

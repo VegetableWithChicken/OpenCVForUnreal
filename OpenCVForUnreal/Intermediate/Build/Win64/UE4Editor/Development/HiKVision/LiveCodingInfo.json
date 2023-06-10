@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HiKVision.cpp.obj": [
+			"HiKVision.cpp.obj",
+			"HiKVisionActor.cpp.obj"
+		],
+		"Module.HiKVision.gen.cpp.obj": [
+			"HiKVision.init.gen.cpp.obj",
+			"HiKVisionActor.gen.cpp.obj"
+		]
+	}
+}

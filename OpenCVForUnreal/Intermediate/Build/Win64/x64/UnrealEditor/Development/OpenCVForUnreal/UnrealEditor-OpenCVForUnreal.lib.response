@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-OpenCVForUnreal.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UnrealPro\MyProject\Intermediate\Build\Win64\x64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.obj"
+"D:\UnrealPro\MyProject\Plugins\OpenCVForUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\OpenCVForUnreal\Module.OpenCVForUnreal.cpp.obj"
+"D:\UnrealPro\MyProject\Plugins\OpenCVForUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\OpenCVForUnreal\Default.rc2.res"
+/OUT:"D:\UnrealPro\MyProject\Plugins\OpenCVForUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\OpenCVForUnreal\UnrealEditor-OpenCVForUnreal.lib"

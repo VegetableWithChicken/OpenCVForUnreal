@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-HiKVision.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UnrealPro\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\UnrealPro\MyProject\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Module.HiKVision.cpp.obj"
+"D:\UnrealPro\MyProject\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Module.HiKVision.gen.cpp.obj"
+"D:\UnrealPro\MyProject\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Default.rc2.res"
+/OUT:"D:\UnrealPro\MyProject\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\UnrealEditor-HiKVision.lib"

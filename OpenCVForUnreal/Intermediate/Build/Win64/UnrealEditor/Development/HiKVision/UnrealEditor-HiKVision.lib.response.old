@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-HiKVision.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Users\chong.peng\Documents\Unreal Projects\CVTest\OpenCV_Test\Intermediate\Build\Win64\OpenCV_TestEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Users\chong.peng\Documents\Unreal Projects\CVTest\OpenCV_Test\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Module.HiKVision.cpp.obj"
+"D:\Users\chong.peng\Documents\Unreal Projects\CVTest\OpenCV_Test\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Module.HiKVision.gen.cpp.obj"
+"D:\Users\chong.peng\Documents\Unreal Projects\CVTest\OpenCV_Test\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\Default.rc2.res"
+/OUT:"D:\Users\chong.peng\Documents\Unreal Projects\CVTest\OpenCV_Test\Plugins\HiKVision\Intermediate\Build\Win64\UnrealEditor\Development\HiKVision\UnrealEditor-HiKVision.lib"
